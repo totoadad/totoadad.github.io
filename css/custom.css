@@ -48,7 +48,7 @@
     }
     .carousel img {
       min-width: 100%;
-      height: auto;
+      height: 500px;
     }
     .carousel-caption {
       background-color: transparent;
@@ -123,7 +123,7 @@
       }
       .carousel img {
         width: auto;
-        height: auto;
+        height: 500px;
       }
       .featurette {
         height: auto;
@@ -150,7 +150,7 @@
         height: 300px;
       }
       .carousel img {
-        height: auto;
+        height: 300px;
       }
       .carousel-caption {
         width: 65%;
