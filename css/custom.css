@@ -175,3 +175,12 @@
         line-height: 1.5;
       }
     }
+/* Native collapse behavior; preserve the original dimensions and colors. */
+.collapse.in { height: auto; overflow: visible; }
+@media (max-width: 979px) { .nav-collapse.in { height: auto; overflow: visible; } }
+
+.collapse:not(.nav-collapse):not(.in) { visibility: hidden; }
+@media (max-width: 979px) {
+  .nav-collapse:not(.in) { visibility: hidden; }
+  .nav-collapse .dropdown:not(.open) .dropdown-menu { display: none; }
+}
