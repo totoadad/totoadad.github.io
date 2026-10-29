@@ -10,9 +10,8 @@
     <meta name="author" content="ひづる">
 
     <!-- Le styles -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-	<link href="css/custom.css?v=20261029-hero-width" rel="stylesheet">
+    <link href="css/bootstrap.min.css?v=5.3.8" rel="stylesheet">
+	<link href="css/custom.css?v=20261029-bs5" rel="stylesheet">
 
     <!-- Fav and touch icons -->
     <link rel="shortcut icon" href="img/01/mami.png">
@@ -23,71 +22,65 @@
     <!-- NAVBAR
     ================================================== -->
     <!-- Wrap the .navbar in .container to center it on the page and provide easy way to target it with .navbar-wrapper. -->
-    <div class="navbar-wrapper">
-	
-      <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
+    <div class="site-navbar-wrapper">
+      <nav class="navbar site-navbar fixed-top" aria-label="メインナビゲーション">
+        <div class="site-navbar-inner">
           <div class="container">
-		    <button type="button" aria-label="メニューを開閉" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="brand" href="index.html">Hizu finale!(Hizuru)</a>
-            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-            <div class="nav-collapse collapse">
-              <ul class="nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#" rel="tooltip" title="Welcome to My Page!">About</a></li>
-				<li><a href="schedule.html">Schedule</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Loves <b class="caret"></b></a>
+            <a class="navbar-brand" href="index.html">Hizu finale!(Hizuru)</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#site-navigation" aria-controls="site-navigation" aria-expanded="false" aria-label="メニューを開閉"><span class="navbar-toggler-icon"></span></button>
+            <div id="site-navigation" class="collapse navbar-collapse">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" title="Welcome to My Page!">About</a></li>
+				<li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+                <li class="nav-item dropdown">
+                  <button type="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">Loves</button>
                   <ul class="dropdown-menu">
-                    <li><a href="http://www.archlinux.org/" target="_blank" rel="noopener noreferrer">Arch Linux</a></li>
-					<li><a href="http://www.monsterenergy.com/" target="_blank" rel="noopener noreferrer">Monster Energy</a></li>
-					<li class="divider"></li>
-                    <li><a href="http://www.madoka-magica.com/" target="_blank" rel="noopener noreferrer">魔法少女まどか☆マギカ</a></li>
-                    <li><a href="http://www.chax.cc/index.html" target="_blank" rel="noopener noreferrer">チャクノチャックス</a></li>
-                    <li><a href="http://www.san-x.co.jp/relaxuma/top.html" target="_blank" rel="noopener noreferrer">リラックマ</a></li>
-					<li class="divider"></li>
-					<li><a href="http://www.capcom.co.jp/bio_series/" target="_blank" rel="noopener noreferrer">バイオハザード</a></li>
-					<li><a href="http://www.konami.jp/kojima_pro/japanese/lineup_mg/" target="_blank" rel="noopener noreferrer">メタルギアソリッド</a></li>
-					<li class="divider"></li>
-					<li><a href="http://www.551horai.co.jp/" target="_blank" rel="noopener noreferrer">551蓬莱オフィシャルサイト</a></li>
-					<li><a href="http://www.liptonchilled.com/" target="_blank" rel="noopener noreferrer">Lipton</a></li>
+                    <li><a class="dropdown-item" href="http://www.archlinux.org/" target="_blank" rel="noopener noreferrer">Arch Linux</a></li>
+					<li><a class="dropdown-item" href="http://www.monsterenergy.com/" target="_blank" rel="noopener noreferrer">Monster Energy</a></li>
+					<li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="http://www.madoka-magica.com/" target="_blank" rel="noopener noreferrer">魔法少女まどか☆マギカ</a></li>
+                    <li><a class="dropdown-item" href="http://www.chax.cc/index.html" target="_blank" rel="noopener noreferrer">チャクノチャックス</a></li>
+                    <li><a class="dropdown-item" href="http://www.san-x.co.jp/relaxuma/top.html" target="_blank" rel="noopener noreferrer">リラックマ</a></li>
+					<li><hr class="dropdown-divider"></li>
+					<li><a class="dropdown-item" href="http://www.capcom.co.jp/bio_series/" target="_blank" rel="noopener noreferrer">バイオハザード</a></li>
+					<li><a class="dropdown-item" href="http://www.konami.jp/kojima_pro/japanese/lineup_mg/" target="_blank" rel="noopener noreferrer">メタルギアソリッド</a></li>
+					<li><hr class="dropdown-divider"></li>
+					<li><a class="dropdown-item" href="http://www.551horai.co.jp/" target="_blank" rel="noopener noreferrer">551蓬莱オフィシャルサイト</a></li>
+					<li><a class="dropdown-item" href="http://www.liptonchilled.com/" target="_blank" rel="noopener noreferrer">Lipton</a></li>
                   </ul>
                 </li>
-                <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Accounts <b class="caret"></b></a>
+                
+                <li class="nav-item dropdown">
+                  <button type="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">Accounts</button>
                   <ul class="dropdown-menu">
-                    <li><a href="http://twitter.com/totoadad" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-					<li><a href="http://instagram.com/totoadad" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-					<li><a href="http://foursquare.com/totoadad" target="_blank" rel="noopener noreferrer">Foursquare</a></li>
-                    <li><a href="http://totoadad.hatenablog.com/" target="_blank" rel="noopener noreferrer">Hatena Blog</a></li>
-					<li><a href="http://www.hatena.ne.jp/totoadad/" target="_blank" rel="noopener noreferrer">Hatena</a></li>
-                    <li><a href="http://github.com/hizuru" target="_blank" rel="noopener noreferrer">Github</a></li>
-                    <li><a href="http://gist.github.com/hizuru" target="_blank" rel="noopener noreferrer">Gist</a></li>
-                    <li><a href="http://theinterviews.jp/toad73" target="_blank" rel="noopener noreferrer">THE INTERVIEWS</a></li>
-                    <li><a href="http://totoadad.tumblr.com/" target="_blank" rel="noopener noreferrer">Tumblr</a></li>
-                    <li><a href="http://booklog.jp/users/totoadad" target="_blank" rel="noopener noreferrer">Booklog</a></li>
+                    <li><a class="dropdown-item" href="http://twitter.com/totoadad" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+					<li><a class="dropdown-item" href="http://instagram.com/totoadad" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+					<li><a class="dropdown-item" href="http://foursquare.com/totoadad" target="_blank" rel="noopener noreferrer">Foursquare</a></li>
+                    <li><a class="dropdown-item" href="http://totoadad.hatenablog.com/" target="_blank" rel="noopener noreferrer">Hatena Blog</a></li>
+					<li><a class="dropdown-item" href="http://www.hatena.ne.jp/totoadad/" target="_blank" rel="noopener noreferrer">Hatena</a></li>
+                    <li><a class="dropdown-item" href="http://github.com/hizuru" target="_blank" rel="noopener noreferrer">Github</a></li>
+                    <li><a class="dropdown-item" href="http://gist.github.com/hizuru" target="_blank" rel="noopener noreferrer">Gist</a></li>
+                    <li><a class="dropdown-item" href="http://theinterviews.jp/toad73" target="_blank" rel="noopener noreferrer">THE INTERVIEWS</a></li>
+                    <li><a class="dropdown-item" href="http://totoadad.tumblr.com/" target="_blank" rel="noopener noreferrer">Tumblr</a></li>
+                    <li><a class="dropdown-item" href="http://booklog.jp/users/totoadad" target="_blank" rel="noopener noreferrer">Booklog</a></li>
                   </ul>
                 </li>
               </ul>
-            </div><!--/.nav-collapse -->
-          </div><!-- /.container -->
-        </div><!-- /.navbar-inner -->
-      </div><!-- /.navbar -->
-    </div><!-- /.navbar-wrapper -->
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
 
     <!-- Carousel
     ================================================== -->
-    <div class="carousel">
-      <div class="carousel-inner">
-        <div class="item active">
+    <div class="site-hero">
+      <div class="site-hero-inner">
+        <div class="site-hero-slide">
           <img src="img/01/img-01.jpg" alt="">
           <div class="container">
-            <div class="carousel-caption">
+            <div class="site-hero-caption">
               <h1>名刺について٩(๑❛ᴗ❛๑)۶</h1>
               <p class="lead">このページは私(ひづる)から名刺をもらった方を対象にしています．</p>
             </div><!-- /.carousel-caption -->
@@ -101,13 +94,13 @@
     <!-- Wrap the rest of the page in another container to center all the content. -->
 	
 	<div class="container">
-	  <div class="alert alert-block alert-danger">
+	  <div class="alert site-alert-block alert-danger">
         <h4>このページは私(ひづる)から名刺をもらった方を対象にしています．<br>名刺について重大なネタバレがありますので名刺をお持ちで無い方は見ないことをおすすめします．</h4>
 		
       </div>
 	</div>
     <div class="container marketing">
-	  <button class="btn btn-warning" data-toggle="collapse" data-target="#demo">
+	  <button class="btn btn-warning" data-bs-toggle="collapse" data-bs-target="#demo" aria-controls="demo" aria-expanded="false">
         組み立て方
       </button>
  
@@ -139,7 +132,7 @@
 	  
       <!-- FOOTER -->
       <footer>
-        <p><a class="btn btn-large btn-warning pull-right" href="#">✿</a></p>
+        <p><a class="btn btn-lg btn-warning float-end" href="#">✿</a></p>
         <p>Copyright &copy; 2012 <a href="http://twitter.com/totoadad" target="_blank" rel="noopener noreferrer">@totoadad</a> All Rights Reserved.</p>
       </footer>
 
@@ -148,6 +141,7 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-	<script src="js/custom.js" defer></script>
+	<script src="js/bootstrap.bundle.min.js?v=5.3.8" defer></script>
+    <script src="js/custom.js?v=20261029-bs5" defer></script>
   </body>
 </html>
