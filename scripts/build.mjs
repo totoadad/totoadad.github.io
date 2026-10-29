@@ -1,10 +1,10 @@
-import { readdir, readFile, mkdir, cp, stat } from 'node:fs/promises';
+import { readdir, readFile, mkdir, cp, stat, rm } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { Script } from 'node:vm';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const output = path.join(root, '_site');
-const entries = ['index.html', 'schedule.html', 'businesscard.html', 'css', 'js', 'img', 'tobimori', '.nojekyll'];
+const entries = ['index.html', 'schedule.html', 'businesscard.html', 'css/bootstrap.min.css', 'css/custom.css', 'js/bootstrap.bundle.min.js', 'js/custom.js', 'LICENSE.bootstrap.txt', 'img', 'tobimori', '.nojekyll'];
 const files = [];
 async function walk(relative) {
   const absolute = path.join(root, relative);
@@ -32,6 +32,8 @@ for (const name of files) {
   }
   if (name.endsWith('.html') && /<script[^>]+src=["']http:\/\//i.test(text)) throw Error(name + ': insecure script');
 }
+if (path.dirname(output) !== root || path.basename(output) !== '_site') throw Error('Unexpected output path');
+await rm(output, {recursive: true, force: true});
 await mkdir(output, {recursive: true});
 for (const entry of entries) await cp(path.join(root, entry), path.join(output, entry), {recursive: true});
 console.log('Validated ' + checked + ' local references and JavaScript syntax. Published files: ' + files.length);
