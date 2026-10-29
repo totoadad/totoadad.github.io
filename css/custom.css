@@ -47,7 +47,10 @@
       height: 500px;
     }
     .carousel img {
-      min-width: 100%;
+      width: 100%;
+      min-width: 0;
+      max-width: min(100%, 1920px);
+      margin-inline: auto;
       height: 500px;
     }
     .carousel-caption {
